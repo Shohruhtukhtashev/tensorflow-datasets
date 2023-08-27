@@ -24,7 +24,7 @@ if models == 'DeepWeeds':
         sites across Queensland: "Black River", "Charters Towers", "Cluden", "Douglas", "Hervey Range", "Kelso", "McKinlay" and "Paluma".')
     st.write(f'Can identify these things ➡ "Chinee apple", "Snake weed", "Lantana", "Prickly acacia", "Siam weed", "Parthenium", "Rubber vine", "Parkinsonia", "Nigatives"')
 
-    model = tf.keras.models.load_model('../deepweeds/deepweeds.h5')
+    model = tf.keras.models.load_model('deepweeds.h5')
 
     if uploaded_file is not None:
         # for 3 channels image
@@ -55,7 +55,7 @@ if models == 'MNIST':
     st.write(f'The MNIST database of handwritten digits.')
     st.write(f'Can identify these things ➡ 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |')
 
-    model = tf.keras.models.load_model('../mnist/mnist.h5')
+    model = tf.keras.models.load_model('mnist.h5')
 
     if uploaded_file is not None:
         img = Image.open(uploaded_file)
@@ -76,7 +76,7 @@ if models == 'Cats&Dogs':
     st.write(f'A large set of images of cats and dogs. There are 1738 corrupted images that are dropped.')
     st.write(f'Can identify these things ➡ Cats and Dogs')
 
-    model = tf.keras.models.load_model('../cats_and_dogs/cats&dogs.h5')
+    model = tf.keras.models.load_model('cats&dogs.h5')
 
     if uploaded_file is not None:
         # for 3 channels image
